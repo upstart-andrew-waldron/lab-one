@@ -1,5 +1,5 @@
 spring:
-  flyway.defaultSchema: learning
+  flyway.defaultSchema: lab
   datasource:
     url: jdbc:postgresql://localhost:5432/?currentSchema=${spring.flyway.default-schema}
     username: postgres
