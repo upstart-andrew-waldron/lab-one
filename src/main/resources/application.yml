@@ -1,0 +1,13 @@
+spring:
+  flyway.defaultSchema: learning
+  datasource:
+    url: jdbc:postgresql://localhost:5432/?currentSchema=${spring.flyway.default-schema}
+    username: postgres
+    password: password
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/?schema=${spring.flyway.default-schema}
+    username: postgres
+    password: password
+logging:
+  level:
+    root: INFO
