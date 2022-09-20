@@ -1,10 +1,10 @@
-package com.upstart.learning.introduction
+package com.upstart.lab.one
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class LearningIntroductionApplicationTests {
+class LabOneApplicationTests {
 
     @Test
     fun contextLoads() {

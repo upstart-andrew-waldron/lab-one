@@ -1,11 +1,11 @@
-package com.upstart.learning.introduction.controller
+package com.upstart.lab.one.controller
 
 import com.fasterxml.jackson.core.type.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.ninjasquad.springmockk.MockkBean
-import com.upstart.learning.introduction.model.dto.BoxCreateRequest
-import com.upstart.learning.introduction.model.dto.BoxCreateResponse
-import com.upstart.learning.introduction.service.BoxService
+import com.upstart.lab.one.model.dto.BoxCreateRequest
+import com.upstart.lab.one.model.dto.BoxCreateResponse
+import com.upstart.lab.one.service.BoxService
 import io.mockk.every
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -45,9 +45,11 @@ internal class BoxControllerTest {
         every {
             boxService.loadBoxFromRequest(any(), any())
         } answers {
-            secondArg< Consumer<BoxCreateResponse>>().accept(BoxCreateResponse(
+            secondArg< Consumer<BoxCreateResponse>>().accept(
+                BoxCreateResponse(
                 1234
-            ));
+            )
+            );
         }
     }
 
